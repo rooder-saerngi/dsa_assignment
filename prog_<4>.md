@@ -13,13 +13,20 @@ struct node {
     struct node* prev;
 };
 ```
-* **to implement insert and delete nodes in a doubly linkedlist :**
-   * **->create a function insert_after**
-   * **->checking:
+* ***to implement insert and delete nodes in a doubly linkedlist :***
+   * ***->create a function insert_after***
+  * **->checking:**
  ```
   if (prev_node == NULL) {
     printf("previous node can't be NULL\n");
     return;
 }
   ```
-**
+   * **->we cannot insert a node after node that is NULL meaning it doesn't exist**
+  * ***Memory Allocation:***
+    * ```
+      struct node* new_node = (struct node*)malloc(sizeof(struct node));
+      new_node->data = new_data;
+      ```
+    *
+
