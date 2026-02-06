@@ -29,4 +29,23 @@ struct node {
       new_node->data = new_data;
       ```
     * **We reserve space in memory for our new node and set its value. At this point, the node exists in memory but isn't connected to our list yet.**
+ * ***Connecting the New Node ("Stitching"):***
+   * ```
+     new_node->next = prev_node->next; // Point new node forward to the successor
+     new_node->prev = prev_node;       // Point new node backward to the predecessor
+     prev_node->next = new_node;       // Update predecessor to point to new node
+
+     if (new_node->next != NULL) {     // If a successor exists, point it back to new node
+        new_node->next->prev = new_node;
+     }
+     ```
+  * ***handling the right side neighbour***
+    * **If our new node was inserted in the middle of a list (meaning there is a node after it), that neighbor is still pointing its prev pointer back at prev_node. We update that neighbor's prev pointer to point to our new_node instead.**
+    * ```
+      if (new_node->next != NULL) {
+       new_node->next->prev = new_node;
+      }
+      ```
+    
+ 
 
