@@ -28,5 +28,5 @@ struct node {
       struct node* new_node = (struct node*)malloc(sizeof(struct node));
       new_node->data = new_data;
       ```
-    *
+    * **We reserve space in memory for our new node and set its value. At this point, the node exists in memory but isn't connected to our list yet.**
 
