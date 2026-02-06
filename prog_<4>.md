@@ -22,7 +22,7 @@ struct node {
     return;
 }
   ```
-   * **we cannot insert a node after node that is NULL meaning it doesn't exist**
+ *  **we cannot insert a node after node that is NULL meaning it doesn't exist**
   * ***Memory Allocation:***
     * ```
       struct node* new_node = (struct node*)malloc(sizeof(struct node));
