@@ -15,9 +15,11 @@ struct node {
 ```
 * **to implement insert and delete nodes in a doubly linkedlist :**
    * **->create a function insert_after**
-   * **->checking:```
+   * **->checking:
+ ```
   if (prev_node == NULL) {
     printf("previous node can't be NULL\n");
     return;
 }
-  ```**
+  ```
+**
