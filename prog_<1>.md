@@ -26,12 +26,13 @@ class stack :
     def is_empty(self):
         return self.top == -1
 ```
-
-now the main problem is solved by this paticular logic 
-*made a dictionary(map) named end map where it maps ) to ( and the counter parts of other brackets [ and {
-*make a for loop where if a variable c indicating a character exists in a expression , then checks if that expression contains the brackets "(","{","[" 
-*if there are the brackets characters then c is ppushed into the stack 
-*if there are ")","}","]" exist 
+* **Map Closing Brackets:** Create a dictionary (map) named `endmap` that maps each closing bracket to its opening counterpart.
+* **Iterate Through Expression:** Use a `for` loop to check each character `c` in the given expression.
+* **Push Opening Brackets:** If `c` is an opening bracket, push it onto the stack.
+* **Validate Closing Brackets:** If `c` is a closing bracket:
+    * Check if the stack is empty (returns `False` if empty).
+    * Pop the stack and check if the popped element matches the `endmap` value for `c`.
+* **Final Mismatch Check:** Return `False` if the brackets do not match.
 
 ```
 def evaluate(expression):
