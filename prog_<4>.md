@@ -6,3 +6,10 @@ of the functions.
   * **->`data`**
   * **->`prev`**
   * **->`next`**
+```
+struct node {
+    int data;
+    struct node* next;
+    struct node* prev;
+};
+```
