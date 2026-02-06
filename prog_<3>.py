@@ -23,7 +23,6 @@ def reverse_traversal(head):
 def main(node):
     while node is not None:
         print(node.data, end="")
-        # Changed 'while' to 'if' to prevent an infinite loop
         if node.next is not None:
             print("->", end="")
         node = node.next
