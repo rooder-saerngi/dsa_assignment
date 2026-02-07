@@ -36,7 +36,8 @@ use of your program with example graph.***
   };
   ```
  #***explanation of BFS and DFS in the code***
- ***BFS***
+ 
+  #***BFS***
   * BFS uses a Queue and a visited array to explore neighbors layer by layer.
     ```
     void bfs(struct graph* Graph, int startVertex) {
