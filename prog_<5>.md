@@ -66,6 +66,28 @@ use of your program with example graph.***
  * f 0 is connected to 1 and 4, it goes 0 ***to*** 4. At 4, it sees a neighbor (like 3) and goes 4 ***to*** 3 before it ever goes back to check 1.
 
 
+#***output of my code***
+```
+Adjacency list of vertex 0
+ head -> 4-> 1
+
+ Adjacency list of vertex 1
+ head -> 4-> 3-> 2-> 0
+
+ Adjacency list of vertex 2
+ head -> 3-> 1
+
+ Adjacency list of vertex 3
+ head -> 4-> 2-> 1
+
+ Adjacency list of vertex 4
+ head -> 3-> 1-> 0
+
+BFS traversal: 0 4 1 3 2 
+DFS traversal: 0 4 3 2 1
+```
+
+
 
 
 
