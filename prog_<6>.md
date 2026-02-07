@@ -26,7 +26,7 @@
   }
 
   ```
-* in Min heap the parent nose must ve lesser or equal to its children
+* in Min heap the parent nose must be lesser or equal to its children
   ```
   void minheap(int arr[], int n , int i ){
     int smallest = i;
