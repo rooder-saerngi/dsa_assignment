@@ -35,4 +35,27 @@ use of your program with example graph.***
     struct AdjListNode *next;
   };
   ```
+ #***explanation of BFS and DFS in the code***
+ ***BFS***
+  * BFS uses a Queue and a visited array to explore neighbors layer by layer.
+    ```
+    void bfs(struct graph* Graph, int startVertex) {
+    int* visited = calloc(Graph->V, sizeof(int));
+    int* queue = malloc(Graph->V * sizeof(int));
+    int front = 0, rear = 0;
+
+    visited[startVertex] = 1;
+    queue[rear++] = startVertex;
+    ```
+    * When you visit a vertex, you look at its linked list `(Graph->array[currentVertex]).`
+    * You loop through that list. If a neighbor isn't marked in the visited array, you add it to the `queue`
+    * Because it's a queue (First-In, First-Out), vertex 0's immediate neighbors (1 and 4) are processed completely before the code moves on to neighbors of 1 or 4
+***DFS***
+ * DFS is split into two parts:
+  * a setup function `*(dfs)*`
+  * a recursive worker function `*(dfsUtil)*`.
+
+
+
+
  
