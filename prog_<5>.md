@@ -51,10 +51,15 @@ use of your program with example graph.***
     * When you visit a vertex, you look at its linked list `(Graph->array[currentVertex]).`
     * You loop through that list. If a neighbor isn't marked in the visited array, you add it to the `queue`
     * Because it's a queue (First-In, First-Out), vertex 0's immediate neighbors (1 and 4) are processed completely before the code moves on to neighbors of 1 or 4
-***DFS***
+ #***DFS***
  * DFS is split into two parts:
   * a setup function `*(dfs)*`
   * a recursive worker function `*(dfsUtil)*`.
+ * As soon as the while loop finds a neighbor that hasn't been visited, it stops what it's doing and calls dfsUtil on that neighbor.
+ * This is "recursive." The computer remembers where it left off. Once the code hits a dead end (a node with no unvisited neighbors), it backtracks to the previous function call and continues the while loop to check the next neighbor.
+ * f 0 is connected to 1 and 4, it goes 0 ***to*** 4. At 4, it sees a neighbor (like 3) and goes 4 ***to*** 3 before it ever goes back to check 1.
+
+
 
 
 
