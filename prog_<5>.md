@@ -56,8 +56,8 @@ use of your program with example graph.***
 
   
  * DFS is split into two parts:
-  * a setup function `*(dfs)*`
-  * a recursive worker function `*(dfsUtil)*`.
+   * a setup function `*(dfs)*`
+   * a recursive worker function `*(dfsUtil)*`.
  
  * As soon as the while loop finds a neighbor that hasn't been visited, it stops what it's doing and calls dfsUtil on that neighbor.
  
